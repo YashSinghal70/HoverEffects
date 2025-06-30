@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdshadow</title>
+    <style>
+        
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 3rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-element {
+  filter: drop-shadow(10rem 0 0 rgba(0, 30, 200, 0.8)) drop-shadow(-10rem 0 0 rgba(0, 30, 200, 0.8)) drop-shadow(20rem 0 0 rgba(0, 30, 200, 0.8)) drop-shadow(-20rem 0 0 rgba(0, 30, 200, 0.8));
+  transition: filter 600ms;
+}
+
+.parent-element:hover {
+  filter: drop-shadow(0 0 0 rgba(0, 30, 200, 0.8));
+}
+
+.clipped-element {
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+  background-color: deeppink;
+  clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0 100%, 50% 50%)
+}
+    </style>
+</head>
+<body>
+    <div class="parent-element">
+        <div class="clipped-element"></div>
+      </div>
+</body>
+</html>
