@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box 
+        {
+            background-size: contain;
+            width: 100px;
+            height: 100px;
+            background-repeat: no-repeat;
+            margin: 100px 50px;
+/* background-image: url(Sports-Ball-Transparent-removebg-preview.png);   */
+animation: ball 2s linear infinite alternate;
+
+
+     }
+     .box  img{
+        width: 100%;
+        height: 100%;
+     }
+     @keyframes ball {
+       from
+       {
+        transform: translateY(100px);
+       }
+      to
+       {
+        transform: translateY(400px);
+}
+       /* 0%
+       {
+        transform: translateY(6);
+       } */
+     
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+  <img src="Sports-Ball-Transparent-removebg-preview.png" alt="">
+    </div>
+</body>
+</html>
